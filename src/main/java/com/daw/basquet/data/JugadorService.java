@@ -116,6 +116,7 @@ public class JugadorService {
         jugadorRepository.save(darc);
 
         //Introduucido Cambio tronco
+        // laic an suscraib
 
 
         System.out.println("==============================================================");
