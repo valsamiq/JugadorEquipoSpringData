@@ -26,5 +26,8 @@ public class EquipoService {
 
         Equipo vallgorguina = new Equipo("CBSC", "SantCeloni", LocalDate.of(1987, 3,2));
         equipoRepository.save(vallgorguina);
+
+        Equipo algo = new Equipo("algo", "algolona", LocalDate.of(1987, 3,2));
+        equipoRepository.save(algo);
     }
 }
