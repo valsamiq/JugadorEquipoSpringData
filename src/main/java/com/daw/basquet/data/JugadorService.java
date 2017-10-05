@@ -118,49 +118,54 @@ public class JugadorService {
         //Introduucido Cambio tronco
         // laic an suscraib
 
-
+        System.out.println("");
         System.out.println("==============================================================");
-
-        System.out.println("Buscar por frangmento de nombre: Lan");
+        System.out.println("");
+        System.out.println("Buscar por frangmento de nombre: Lan (debería salir Landa)");
         System.out.println(jugadorRepository.findByNombreContaining("lan"));
-
+        System.out.println("");
         System.out.println("==============================================================");
-
+        System.out.println("");
         System.out.println("Canastas mayores a 6: ");
         System.out.println(jugadorRepository.findByNumCanastasBetween(1, 10));
-
+        System.out.println("");
         System.out.println("==============================================================");
-
-        System.out.println("Buscar por posición concreta: ");
+        System.out.println("");
+        System.out.println("Buscar por posición concreta: (Base) ");
         System.out.println(jugadorRepository.findByPosicion("Base"));
-
+        System.out.println("");
         System.out.println("==============================================================");
-
+        System.out.println("");
         System.out.println("Buscar por fecha de naciemiento anterior a 1900: ");
         System.out.println(jugadorRepository.findByFechaNacimientoBefore(LocalDate.of(1900, 1, 1)));
-
+        System.out.println("");
         System.out.println("==============================================================");
-
+        System.out.println("");
         System.out.println("Agrupar por Posicion y tal: ");
         System.out.println(jugadorRepository.AvgCanastasAndAvgAndNumAsistenciasAndNumRebotesGroupBOrderByPosicion());
-
+        System.out.println("");
         System.out.println("==============================================================");
-
+        System.out.println("");
         System.out.println("Buscar equipo por localidad: ");
         System.out.println(equipoRepository.findByLocation("breda"));
-
+        System.out.println("");
         System.out.println("==============================================================");
-
+        System.out.println("");
         System.out.println("Buscar Jugadores por Equipo: ");
         System.out.println(jugadorRepository.findByEquipoName("cb.batlloria"));
         System.out.println("==============================================================");
-
+        System.out.println("");
         System.out.println("Buscar Jugadores por Equipo, y posición, tronco: ");
         System.out.println(jugadorRepository.findByEquipoNameAndPosicion("bredaBC","aleron"));
-
+        System.out.println("");
         System.out.println("==============================================================");
-
-        System.out.println("Buscar el que mas canastas ha marcado de un Equipo, loko: ");
+        System.out.println("");
+        System.out.println("Buscar el que mas canastas ha marcado de un Equipo: ");
         System.out.println(jugadorRepository.findTopByEquipoNameOrderByNumCanastasDesc("bredaBC"));
+        System.out.println("");
+        System.out.println("==============================================================");
+        System.out.println("");
+        System.out.println("Si aún no ha petado, es que igual funciona bien y todo!");
+        System.out.println("");
     }
 }

@@ -16,10 +16,8 @@ public class Equipo {
     private String name;
     private String location;
     private LocalDate fechaCreacion;
-
     public Equipo() {
     }
-
     public Equipo(String name, String location, LocalDate fechaCreacion) {
         this.name = name;
         this.location = location;
